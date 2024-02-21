@@ -58,7 +58,7 @@ public class SCalculator {
         frame.getContentPane().add(textField);
         textField.setColumns(10);
 
-        JButton btnYthRoot = new JButton("Y√"); // Using custom symbol for yth root
+        JButton btnYthRoot = new JButton("Y√x"); // Using custom symbol for yth root
         btnYthRoot.setEnabled(true);
         btnYthRoot.addActionListener(e -> {
             double num = Double.parseDouble(textField.getText());
