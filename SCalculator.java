@@ -1,8 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class SCalculator {
 
@@ -16,9 +14,7 @@ public class SCalculator {
     String answer;
     private final ButtonGroup buttonGroup = new ButtonGroup();
 
-    /**
-     * Launch the application.
-     */
+    
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
             try {
