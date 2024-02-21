@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 
+
 public class SCalculator {
 
     private JFrame frame;
@@ -14,7 +15,9 @@ public class SCalculator {
     String answer;
     private final ButtonGroup buttonGroup = new ButtonGroup();
 
-    
+    /**
+     * Launch the application.
+     */
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
             try {
@@ -45,7 +48,7 @@ public class SCalculator {
 
 
         textField = new JTextField();
-        textField.setFont(new Font("Tahoma", Font.PLAIN, 30));
+        textField.setFont(new Font("Tahoma", Font.PLAIN, 45));
         textField.setForeground(new Color(242, 242, 242));
         textField.setBackground(new Color(53, 53, 53));
         textField.setBorder(BorderFactory. createLineBorder(new Color(53, 53, 53)));
@@ -54,7 +57,7 @@ public class SCalculator {
         frame.getContentPane().add(textField);
         textField.setColumns(10);
 
-        JButton btnYthRoot = new JButton("Y√x"); // Using custom symbol for yth root
+        JButton btnYthRoot = new JButton("Y√x");
         btnYthRoot.setEnabled(true);
         btnYthRoot.addActionListener(e -> {
             double num = Double.parseDouble(textField.getText());
