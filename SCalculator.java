@@ -15,9 +15,7 @@ public class SCalculator {
     String answer;
     private final ButtonGroup buttonGroup = new ButtonGroup();
 
-    /**
-     * Launch the application.
-     */
+    
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
             try {
@@ -29,16 +27,12 @@ public class SCalculator {
         });
     }
 
-    /**
-     * Create the application.
-     */
+   
     public SCalculator() {
         initialize();
     }
 
-    /**
-     * Initialize the contents of the frame.
-     */
+
     private void initialize() {
         frame = new JFrame();
         frame.getContentPane().setBackground(new Color(50, 50, 50));
@@ -62,9 +56,9 @@ public class SCalculator {
         btnYthRoot.addActionListener(e -> {
             double num = Double.parseDouble(textField.getText());
             double y = Double.parseDouble(JOptionPane.showInputDialog("Enter the value of y:")); // Prompt user for y
-            double result = Math.pow(num, 1.0 / y); // Calculate the yth root
-            textField.setText(""); // Clear the text field
-            textField.setText(textField.getText() + result); // Display the result
+            double result = Math.pow(num, 1.0 / y); 
+            textField.setText(""); 
+            textField.setText(textField.getText() + result);
         });
         btnYthRoot.setFont(new Font("Tahoma", Font.PLAIN, 24));
         btnYthRoot.setBounds(0, 312, 90, 79);
@@ -77,9 +71,9 @@ public class SCalculator {
         btnTenToX.setEnabled(true);
         btnTenToX.addActionListener(e -> {
             double x = Double.parseDouble(textField.getText());
-            double result = Math.pow(10, x); // Calculate 10^x
-            textField.setText(""); // Clear the text field
-            textField.setText(textField.getText() + result); // Display the result
+            double result = Math.pow(10, x); 
+            textField.setText(""); 
+            textField.setText(textField.getText() + result);
         });
         btnTenToX.setFont(new Font("Tahoma", Font.PLAIN, 24));
         btnTenToX.setBounds(0, 233, 90, 79);
@@ -89,24 +83,24 @@ public class SCalculator {
         frame.getContentPane().add(btnTenToX);
 
         JButton btnBlank = new JButton("");
-        btnBlank.setEnabled(true); // Disable the button
+        btnBlank.setEnabled(true);
         btnBlank.addActionListener(e -> {
 
         });
         btnBlank.setBounds(0, 75, 90, 79);
         btnBlank.setForeground(new Color(84, 84, 84));
         btnBlank.setBackground(new Color(84, 84, 84, 255));
-        btnBlank.setBorder(BorderFactory. createLineBorder(new Color(53, 53, 53)));// Adjust the bounds as needed
+        btnBlank.setBorder(BorderFactory. createLineBorder(new Color(53, 53, 53)));
         frame.getContentPane().add(btnBlank);
 
 
-        JButton btnCubeRoot = new JButton("3√"); // Using the cube root symbol
+        JButton btnCubeRoot = new JButton("3√"); 
         btnCubeRoot.setEnabled(true);
         btnCubeRoot.addActionListener(e -> {
             double num = Double.parseDouble(textField.getText());
-            double result = Math.cbrt(num); // Calculate the cubed root
-            textField.setText(""); // Clear the text field
-            textField.setText(textField.getText() + result); // Display the result
+            double result = Math.cbrt(num); 
+            textField.setText(""); 
+            textField.setText(textField.getText() + result);
         });
         btnCubeRoot.setFont(new Font("Tahoma", Font.PLAIN, 24));
         btnCubeRoot.setBounds(0, 391, 90, 79);
@@ -221,7 +215,7 @@ public class SCalculator {
         JButton btnRand = new JButton("Rand");
         btnRand.setEnabled(true);
         btnRand.addActionListener(e -> {
-            // Generate random number
+          
             double randNum = Math.random();
 
             textField.setText(Double.toString(randNum));
@@ -229,7 +223,7 @@ public class SCalculator {
 
         btnRand.setFont(new Font("Tahoma", Font.PLAIN, 24));
 
-// Set bounds relative to frame size
+
         btnRand.setBounds(0, 154, 90, 79);
         btnRand.setForeground(new Color(242, 242, 242));
         btnRand.setBackground(new Color(84, 84, 84, 255));
@@ -320,7 +314,7 @@ public class SCalculator {
 
         btnMod.setFont(new Font("Tahoma", Font.PLAIN, 29));
 
-// Set bounds relative to frame size
+
         btnMod.setBounds(270, 75, 90, 79);
 
         btnMod.setBackground(new Color(84, 84, 84));
@@ -494,7 +488,7 @@ public class SCalculator {
 
         btnE.setFont(new Font("Tahoma", Font.PLAIN, 29));
 
-// Set bounds relative to frame size
+
         btnE.setBounds(270, 233, 90, 79);
 
         btnE.setBackground(new Color(84, 84, 84));
@@ -639,7 +633,6 @@ public class SCalculator {
 
         btnPi.setFont(new Font("Tahoma", Font.PLAIN, 29));
 
-// Set bounds relative to frame size
         btnPi.setBounds(270, 154, 90, 79);
 
         btnPi.setBackground(new Color(84, 84, 84));
@@ -666,7 +659,7 @@ public class SCalculator {
         btnNewButton_3_6.setEnabled(true);
         btnNewButton_3_6.addActionListener(e -> {
             String currentText = textField.getText();
-            // Check if the current text already contains a decimal point
+         
             if (!currentText.contains(".")) {
                 textField.setText(currentText + ".");
             }
