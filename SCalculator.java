@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-
+//trwsedrftgy
 
 public class SCalculator {
 
